@@ -38,3 +38,17 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     margin: 0.25em !important;
   }
+  h3{
+    color: white;
+  }
+  #day{
+    color: white;
+  }
+  .days{
+    color: red;
+  }
+  ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type : none;
+  }

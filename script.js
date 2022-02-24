@@ -29,6 +29,30 @@ for (let i = 0; i < Days.length; i++) {
     liDay.innerHTML = jours;
 };
 
+
+//TEST
+// function getNbJoursMois(mois, annee) {
+//     let lgMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//     if ((annee%4 == 0 && annee%100 != 0) || annee%400 == 0) {
+//     lgMois[1] = 29;
+//     }
+
+
+//     for (let i = 0; i <lgMois[Nowmonths]; i++) {
+//     let tabnumber = [];
+//         let date1 = NowYear.getDate();
+//         date1++;
+//         tabnumber.push(date1++);
+//         console.log(date1);
+//     }
+// }
+// getNbJoursMois();
+// console.log(tabnumber);
+
+
+    
+
+
 //CASES
 
 function getNbJoursMois(mois, annee) {
@@ -39,19 +63,28 @@ function getNbJoursMois(mois, annee) {
 
     let tabnumber = [];
     const paranumber = document.querySelector(".days")
-    for (let i = 0; i <lgMois[Nowmonths]; i++) {
-        tabnumber.push(NowDay++);
-        for (let i = 0; i < tabnumber.length; i++) {
-            const DayNumber = tabnumber[i];
-            tabnumber.splice(0,1);
+    
+        let date1 = NowYear.getDate();
+        for (let i = 0; i <lgMois[Nowmonths]; i++) {
+        tabnumber.push(date1++);
+        if (date1 == lgMois[Nowmonths]+1) {
+            break
+        }
+            const DayNumber = tabnumber[i]+1;
+            let test = document.querySelector("#test");
+            let div = document.createElement("div");
+            div.className = 'card';
+            test.appendChild(div);
+            let divbody = document.createElement("div");
+            divbody.className = 'card-body';
+            div.appendChild(divbody);
             let pnumber = document.createElement("p");
             paranumber.appendChild(pnumber);
             console.log(DayNumber);
             pnumber.innerHTML = DayNumber;
-        }
         
     }
-
+    console.log(tabnumber);
     }
 getNbJoursMois();
 

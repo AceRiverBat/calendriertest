@@ -31,23 +31,23 @@ for (let i = 0; i < Days.length; i++) {
 
 
 //TEST
-// function getNbJoursMois(mois, annee) {
-//     let lgMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-//     if ((annee%4 == 0 && annee%100 != 0) || annee%400 == 0) {
-//     lgMois[1] = 29;
-//     }
+function getNbJoursMois(mois, annee) {
+    let lgMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if ((annee%4 == 0 && annee%100 != 0) || annee%400 == 0) {
+    lgMois[1] = 29;
+    }
 
 
-//     for (let i = 0; i <lgMois[Nowmonths]; i++) {
-//     let tabnumber = [];
-//         let date1 = NowYear.getDate();
-//         date1++;
-//         tabnumber.push(date1++);
-//         console.log(date1);
-//     }
-// }
-// getNbJoursMois();
-// console.log(tabnumber);
+    for (let i = 0; i <lgMois[Nowmonths]; i++) {
+    let tabnumber = [];
+        let date1 = NowYear.getDate();
+        let date2 = date1++;
+        tabnumber.push(date2);
+        console.log(date2);
+    }
+}
+getNbJoursMois();
+console.log(tabnumber);
 
 
     
@@ -55,36 +55,39 @@ for (let i = 0; i < Days.length; i++) {
 
 //CASES
 
-function getNbJoursMois(mois, annee) {
-    let lgMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    if ((annee%4 == 0 && annee%100 != 0) || annee%400 == 0) {
-    lgMois[1] = 29;
-    }
+// function getNbJoursMois(mois, annee) {
+//     let lgMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//     if ((annee%4 == 0 && annee%100 != 0) || annee%400 == 0) {
+//     lgMois[1] = 29;
+//     }
 
-    let tabnumber = [];
-    const paranumber = document.querySelector(".days")
+//     let tabnumber = [];
+//     const paranumber = document.querySelector(".days")
     
-        let date1 = NowYear.getDate();
-        for (let i = 0; i <lgMois[Nowmonths]; i++) {
-        tabnumber.push(date1++);
-        if (date1 == lgMois[Nowmonths]+1) {
-            break
-        }
-            const DayNumber = tabnumber[i]+1;
-            let test = document.querySelector("#test");
-            let div = document.createElement("div");
-            div.className = 'card';
-            test.appendChild(div);
-            let divbody = document.createElement("div");
-            divbody.className = 'card-body';
-            div.appendChild(divbody);
-            let pnumber = document.createElement("p");
-            paranumber.appendChild(pnumber);
-            console.log(DayNumber);
-            pnumber.innerHTML = DayNumber;
+//         let date1 = NowYear.getDate();
+//         for (let i = 0; i <lgMois[Nowmonths]; i++) {
+//         tabnumber.push(date1++);
+//         if (date1 == lgMois[Nowmonths]+1) {
+//             break
+//         }
+while (date1 < lgMois[Nowmonths]) {
+date1++
+}
+//             const DayNumber = tabnumber[i]+1;
+//             let test = document.querySelector("#test");
+//             let div = document.createElement("div");
+//             div.className = 'card';
+//             test.appendChild(div);
+//             let divbody = document.createElement("div");
+//             divbody.className = 'card-body';
+//             div.appendChild(divbody);
+//             let pnumber = document.createElement("p");
+//             paranumber.appendChild(pnumber);
+//             console.log(DayNumber);
+//             pnumber.innerHTML = DayNumber;
         
-    }
-    console.log(tabnumber);
-    }
-getNbJoursMois();
+//     }
+//     console.log(tabnumber);
+//     }
+// getNbJoursMois();
 
